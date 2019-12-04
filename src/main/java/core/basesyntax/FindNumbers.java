@@ -22,9 +22,6 @@ public class FindNumbers {
 
         for (int i = 0; i < text.length(); i++) {
             StringBuilder sb = new StringBuilder();
-            /*if ( (text.charAt(i) >= 48 && text.charAt(i) <= 57)
-                    || (text.charAt(i) == 45 && text.charAt(i+1) >= 48
-                    && text.charAt(i+1) <= 57)) {*/
             while (text.charAt(i) >= 48 && text.charAt(i) <= 57
                     || (text.charAt(i) == 45 && text.charAt(i + 1) >= 48
                     && text.charAt(i + 1) <= 57)) {
@@ -39,14 +36,7 @@ public class FindNumbers {
                 numbers[counter] = Integer.parseInt(sb.toString()) * 2;
                 counter++;
             }
-            //}
-
         }
         return Arrays.copyOf(numbers, counter);
     }
-
-    public boolean isNumberOrMinus(char ch){
-        return ch >= 48 && ch <= 57 || ch == 45;
-    }
-
 }
